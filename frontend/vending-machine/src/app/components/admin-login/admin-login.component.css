@@ -1,0 +1,17 @@
+.admin-login{
+    padding: 40px 0;
+}
+.box{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width:350px;
+    margin:50px auto;
+    background: #14aaea85;
+}
+.box form label{
+    margin-top: 10px;
+}
+.box form button{
+    margin-top: 15px;
+}

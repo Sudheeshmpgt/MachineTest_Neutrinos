@@ -1,0 +1,27 @@
+.product{
+    padding: 40px 0;
+}
+.box{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.content h5{
+    margin-top: 5px;
+}
+.content p{
+    margin-top:5px;
+    font-weight: 600;
+    font-size: medium;
+}
+.pro-button{
+    display: flex;
+    margin-top: 15px;
+    width:100%;
+    justify-content: space-between;
+}
+.pro-button button:hover{
+    color:black;
+    background: transparent;
+}

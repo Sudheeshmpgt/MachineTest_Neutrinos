@@ -1,0 +1,55 @@
+<div>
+  <app-admin-header></app-admin-header>
+  <app-admin-logout></app-admin-logout>
+  <section class="add-product">
+    <div class="container">
+      <div class="box">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Product Name</label>
+            <input
+              type="text"
+              name="product_name"
+              class="form-control"
+              id="exampleInputName"
+              aria-describedby="nameHelp"
+              placeholder="Enter product name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPrice">Product Price</label>
+            <input
+              type="number"
+              name="product_price"
+              class="form-control"
+              id="exampleInputPrice"
+              placeholder="Price"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputInformation">Product Information</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputInformation"
+              placeholder="Description"
+            />
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Product Image</label>
+              <br />
+              <input
+                type="file"
+                name="product_image"
+                class="form-control-file"
+                id="exampleFormControlFile1"
+              />
+            </div>
+          </form>
+          <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
