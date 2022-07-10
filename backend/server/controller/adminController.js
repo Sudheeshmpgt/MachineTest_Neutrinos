@@ -1,6 +1,6 @@
 const AdminModel = require('../model/adminschema'); 
 
-adminLogin = async (req, res) => {
+const adminLogin = async (req, res) => {
     try {
         const { email, password } = req.body;
 
@@ -20,4 +20,23 @@ adminLogin = async (req, res) => {
     }
 }
 
-module.exports = {adminLogin}
+const adminRegister = async (req, res) =>{
+    try {
+        const { email, password } = req.body;
+        const admin = await AdminModel.findOne({ email: email });
+        if (admin) {
+            res.send({ message: "Admin already exists" });
+        } else {
+            const registerAdmin = new AdminModel({
+                email: req.body.email,
+                password: req.body.password 
+            });
+            const admin = await registerAdmin.save();
+            res.send({ message: "Admin Registered Successfully", admin: admin }); 
+        }
+    } catch (error) {
+        res.send(error);
+    }
+} 
+
+module.exports = {adminLogin, adminRegister}

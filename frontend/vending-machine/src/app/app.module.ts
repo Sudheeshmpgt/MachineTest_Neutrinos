@@ -16,6 +16,7 @@ import { AdminHeaderComponent } from './components/admin-header/admin-header.com
 import { AdminLogoutComponent } from './components/admin-logout/admin-logout.component';
 import { ProductInformationComponent } from './components/product-information/product-information.component';
 import { OrderComponent } from './components/order/order.component';
+import { AdminregisterComponent } from './components/adminregister/adminregister.component';
 
 
 
@@ -32,6 +33,7 @@ import { OrderComponent } from './components/order/order.component';
     AdminLogoutComponent,
     ProductInformationComponent,
     OrderComponent,
+    AdminregisterComponent,
   ],
   imports: [
     BrowserModule,
