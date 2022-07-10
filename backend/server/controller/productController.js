@@ -9,7 +9,7 @@ const addNewProduct = async (req, res) => {
             if (product) {
                 res.send({ error: "Product already exists" });
             } else {
-                const addProduct = new ProductModel({
+                const addProduct = new ProductModel({ 
                     product_name,
                     product_price,
                     product_information,
@@ -20,6 +20,7 @@ const addNewProduct = async (req, res) => {
                 res.status(200).send({ message: "Product details added Successfully", product: newProduct });
             }
         } catch (error) {
+            console.log(error)
             res.status(500).send(error);
         }
 }

@@ -1,0 +1,25 @@
+<section class="pro-info">
+  <div class="container">
+    <div class="card-order">
+      <div class="card-header">PRODUCT DETAILS</div>
+      <div
+        class="row card-body"
+      >
+        <div class="col-md-6 col-12 pro-image">
+          <img [src]="product.product_image" alt="" />
+        </div>
+        <div class="col-md-6 col-12 pro-details">
+          <h5 class="card-title">{{ product.product_name }}</h5>
+          <h5 class="card-title">₹ {{ product.product_price }}</h5>
+          <p class="card-text">
+            {{ product.product_information }}
+          </p>
+        </div>
+      </div>
+      <div class="total">
+        <button class="btn btn-secondary" (click)="goBack()">Go Back</button>
+        <button class="btn btn-primary" (click)="addToCart(product)" >Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>

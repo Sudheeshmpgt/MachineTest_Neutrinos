@@ -1,0 +1,21 @@
+.cart-table{
+    margin: 50px 30px 30px 30px;
+    padding: 10px;
+}
+.container{
+    overflow: scroll;
+}
+.container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+.pro-image{
+    width:100px;
+    height:110px;
+}
+.table{
+    border:1px solid rgb(210, 210, 210);
+}
+.sub-total{
+    font-weight: 900;
+}

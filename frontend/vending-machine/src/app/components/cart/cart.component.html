@@ -1,2 +1,37 @@
-<p>cart works!</p>
+<section class="cart-table">
+  <div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"><h5 class="card-title">NO.</h5></th>
+            <th scope="col"><h5 class="card-title">Product</h5></th>
+            <th scope="col"><h5 class="card-title">Name</h5></th>
+            <th scope="col"><h5 class="card-title">Quantity</h5></th>
+            <th scope="col"><h5 class="card-title">Price</h5></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of product; index as i">
+            <td scope="row">{{i+1}}</td>
+            <td>
+                <img class="pro-image" [src]="product.productId.product_image" alt="">
+            </td>
+            <td>{{product.productId.product_name}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.productId.product_price}}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><h5 class="card-title">Sub Total</h5></td>
+            <td><h5 class="card-title">{{total}}</h5></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="order-btn text-end">
+        <button class="btn btn-primary" (click)="placeOrder()">Proceed to Checkout</button>
+      </div>
+  </div>
+</section>
 

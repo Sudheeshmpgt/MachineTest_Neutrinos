@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
     this.httpClient.post<any>('http://localhost:9000/api/user', null).subscribe(res =>{
       this.userId = res.user._id;
       localStorage.setItem("userId", res.user._id)
-    }
+    }  
     )
   }
 

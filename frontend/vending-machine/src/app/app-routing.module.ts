@@ -4,12 +4,16 @@ import { AdminAddProductComponent } from './components/admin-add-product/admin-a
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HomeComponent } from './components/home/home.component';
+import { OrderComponent } from './components/order/order.component';
+import { ProductInformationComponent } from './components/product-information/product-information.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'cart', component: CartComponent},
   {path:'adminlogin', component: AdminLoginComponent},
-  {path:'adminhome', component: AdminAddProductComponent}
+  {path:'adminhome', component: AdminAddProductComponent},
+  {path:'product_info', component: ProductInformationComponent},
+  {path:'order', component: OrderComponent}
 ];
 
 @NgModule({

@@ -32,6 +32,7 @@ export class AdminLoginComponent implements OnInit {
     }
     this.httpClient.post<any>('http://localhost:9000/api/admin/login', values).subscribe(res=>{
       localStorage.setItem("adminId", res.data._id)
+      alert(res.message)
 
       if(res.data._id){
         this.router.navigate(['/adminhome']);

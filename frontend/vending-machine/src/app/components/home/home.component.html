@@ -1,76 +1,19 @@
 <section class="product">
     <div class="container text-center">
-      <div class="row">
-        <div class="col-md-3">
+      <div class="row" >
+        <div class="col-md-3" *ngFor="let product of products" >
           <div class="box">
             <div class="product_img">
-              <img src="../../../assets/imagesOne.jpg" alt="P1" />
+              <img [src]="product.product_image" alt="">
             </div>
             <div class="content">
-              <h5>Product One</h5>
-              <p>₹ 500</p>
+              <h5>{{product.product_name}}</h5>
+              <p> ₹ {{product.product_price}}</p>
               <div class="pro-button">
-                <button class="btn btn-secondary btn-sm" type="button">
+                <button class="btn btn-secondary btn-sm" type="button" (click)="sendData(product)">
                   Info
                 </button>
-                <button class="btn btn-primary btn-sm" type="button">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="box">
-            <div class="product_img">
-              <img src="../../../assets/imagesOne.jpg" alt="P1" />
-            </div>
-            <div class="content">
-              <h5>Product One</h5>
-              <p>₹ 500</p>
-              <div class="pro-button">
-                <button class="btn btn-secondary btn-sm" type="button">
-                  Info
-                </button>
-                <button class="btn btn-primary btn-sm" type="button">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="box">
-            <div class="product_img">
-              <img src="../../../assets/imagesOne.jpg" alt="P1" />
-            </div>
-            <div class="content">
-              <h5>Product One</h5>
-              <p>₹ 500</p>
-              <div class="pro-button">
-                <button class="btn btn-secondary btn-sm" type="button">
-                  Info
-                </button>
-                <button class="btn btn-primary btn-sm" type="button">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="box">
-            <div class="product_img">
-              <img src="../../../assets/imagesOne.jpg" alt="P1" />
-            </div>
-            <div class="content">
-              <h5>Product One</h5>
-              <p>₹ 500</p>
-              <div class="pro-button">
-                <button class="btn btn-secondary btn-sm" type="button">
-                  Info
-                </button>
-                <button class="btn btn-primary btn-sm" type="button">
+                <button class="btn btn-primary btn-sm" type="button" (click)="addToCart(product)">
                   Add to Cart
                 </button>
               </div>

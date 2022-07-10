@@ -25,3 +25,26 @@
     color:black;
     background: transparent;
 }
+.product_img img{
+    width:230px;
+    height:240px;
+}
+.information{
+    display: none;
+    width:100%;
+    margin:0 auto;
+    height:auto;
+    background: rgba(228, 225, 225, 0.571);
+}
+.p-info-head{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color:rgb(4, 4, 171);
+    text-decoration: underline;
+    margin-bottom: -5px;
+}
+.add-information{
+    display: inline-block;
+    transition: 0.10s ease-in-out;
+}
+

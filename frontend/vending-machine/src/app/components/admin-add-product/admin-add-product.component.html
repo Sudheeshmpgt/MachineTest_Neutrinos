@@ -4,12 +4,13 @@
   <section class="add-product">
     <div class="container">
       <div class="box">
-        <form>
+        <form (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="exampleInputEmail1">Product Name</label>
             <input
               type="text"
               name="product_name"
+              [(ngModel)]="product_name"
               class="form-control"
               id="exampleInputName"
               aria-describedby="nameHelp"
@@ -21,6 +22,7 @@
             <input
               type="number"
               name="product_price"
+              [(ngModel)]="product_price"
               class="form-control"
               id="exampleInputPrice"
               placeholder="Price"
@@ -30,6 +32,8 @@
             <label for="exampleInputInformation">Product Information</label>
             <input
               type="text"
+              name="product_information"
+              [(ngModel)]="product_information"
               class="form-control"
               id="exampleInputInformation"
               placeholder="Description"
@@ -42,6 +46,7 @@
               <input
                 type="file"
                 name="product_image"
+                (change)="onFileChange($event)"
                 class="form-control-file"
                 id="exampleFormControlFile1"
               />

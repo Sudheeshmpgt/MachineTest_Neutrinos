@@ -1,0 +1,27 @@
+<section class="order">
+  <div class="container">
+    <div class="card-order">
+      <div class="card-header">CHECK OUT</div>
+      <div
+        class="row card-body"
+        *ngFor="let product of products; let quantity; of: quantities"
+      >
+        <div class="col-md-6 col-12 pro-image">
+          <img [src]="product.productId.product_image" alt="" />
+        </div>
+        <div class="col-md-6 col-12 pro-details">
+          <h5 class="card-title">{{ product.productId.product_name }}</h5>
+          <h5 class="card-title">₹ {{ product.productId.product_price }}</h5>
+          <p class="card-text">
+            {{ product.productId.product_information }}
+          </p>
+          <h5 class="card-title">Qunatity : {{ quantity.quantity }}</h5>
+        </div>
+      </div>
+      <div class="total">
+        <h5 class="card-title">TOTAL : ₹ {{ totalPrice }}</h5>
+        <button class="btn btn-primary">Place Order</button>
+      </div>
+    </div>
+  </div>
+</section>
