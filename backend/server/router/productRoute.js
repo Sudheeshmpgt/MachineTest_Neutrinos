@@ -5,4 +5,4 @@ const {addNewProduct, getAllProducts} = require('../controller/productController
 route.post('/', upload.single("product_image"), addNewProduct)
 route.get('/', getAllProducts)
 
-module.exports = route 
+module.exports = route  

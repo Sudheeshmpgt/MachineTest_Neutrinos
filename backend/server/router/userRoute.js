@@ -3,4 +3,4 @@ const {userLogin} = require('../controller/userController')
 
 route.post('/', userLogin)
 
-module.exports = route 
+module.exports = route  

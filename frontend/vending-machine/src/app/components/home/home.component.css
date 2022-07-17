@@ -47,4 +47,7 @@
     display: inline-block;
     transition: 0.10s ease-in-out;
 }
+.pager{
+    margin-top: 50px;
+}
 

@@ -11,9 +11,12 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  public products?: Product[];
+  public products?: any;
+  public page: number = 1;
+  public total?: number;
 
   constructor(private httpClient:HttpClient, private information:InformationService, private router:Router) { }
+  
 
   ngOnInit(): void {
     this.getAllProducts();
@@ -28,7 +31,23 @@ export class HomeComponent implements OnInit {
   getAllProducts(){
     this.httpClient.get<any>('http://localhost:9000/api/product').subscribe(res=>{
       this.products = res.products;
+      this.total = res.products.length
     })
+  }
+
+  searchText:string = '';
+
+  onSearchTextEntered(searchValue:string){
+    this.searchText = searchValue;
+    if(searchValue === ''){
+      this.ngOnInit();
+    }else{
+      this.products = this.products.filter((data:any)=>{
+        return (
+          data.product_name.toLowerCase().includes(searchValue.toLowerCase())
+        )
+      })
+    }
   }
 
   addToCart(product:any){ 

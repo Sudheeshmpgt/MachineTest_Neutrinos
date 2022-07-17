@@ -22,6 +22,7 @@ const adminLogin = async (req, res) => {
 
 const adminRegister = async (req, res) =>{
     try {
+        console.log(req.body)
         const { email, password } = req.body;
         const admin = await AdminModel.findOne({ email: email });
         if (admin) {
@@ -35,8 +36,9 @@ const adminRegister = async (req, res) =>{
             res.send({ message: "Admin Registered Successfully", admin: admin }); 
         }
     } catch (error) {
+        console.log(error)
         res.send(error);
     }
-} 
+}  
 
 module.exports = {adminLogin, adminRegister}

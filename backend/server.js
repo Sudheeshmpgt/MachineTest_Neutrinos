@@ -16,5 +16,5 @@ app.use('/api/order', require('./server/router/orderRoute'))
 app.use('/api/admin', require('./server/router/adminRoute'))
 
 app.listen(PORT, ()=>{
-    console.log("Server started at http://localhost:9000")
-})
+    console.log("Server started at http://localhost:9000") 
+}) 

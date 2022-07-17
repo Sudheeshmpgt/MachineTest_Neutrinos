@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -17,6 +18,7 @@ import { AdminLogoutComponent } from './components/admin-logout/admin-logout.com
 import { ProductInformationComponent } from './components/product-information/product-information.component';
 import { OrderComponent } from './components/order/order.component';
 import { AdminregisterComponent } from './components/adminregister/adminregister.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 
@@ -34,13 +36,16 @@ import { AdminregisterComponent } from './components/adminregister/adminregister
     ProductInformationComponent,
     OrderComponent,
     AdminregisterComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

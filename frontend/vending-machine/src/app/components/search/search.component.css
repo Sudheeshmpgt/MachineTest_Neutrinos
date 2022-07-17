@@ -1,0 +1,19 @@
+.search{
+    width:100%;
+    margin-top: -45px;
+}
+.search-class{
+margin:0 auto;
+display:flex;
+width:300px;
+}
+.search-class input{
+    margin-left: 10px;
+    margin-top: -4px;
+}
+
+@media only screen and (max-width: 425px){
+    .search{
+        margin-top:15px;
+    }
+}

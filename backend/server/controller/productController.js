@@ -20,7 +20,6 @@ const addNewProduct = async (req, res) => {
                 res.status(200).send({ message: "Product details added Successfully", product: newProduct });
             }
         } catch (error) {
-            console.log(error)
             res.status(500).send(error);
         }
 }
