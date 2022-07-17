@@ -1,0 +1,26 @@
+#specify the docker compose version
+version: '3.0'
+
+#define the services to run
+services:
+  angular:   
+    build: frontend
+    ports:
+      - "4200:4200"
+
+  express:
+    build: backend
+    ports: 
+      - "9000:9000"
+    links:
+      - database
+  
+  database:
+    image: mongo
+    ports: 
+      - "27017:27017"
+
+
+
+
+  
