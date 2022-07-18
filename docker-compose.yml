@@ -2,7 +2,7 @@
 version: '3.0'
 
 #define the services to run
-services:
+services: 
   angular:   
     build: frontend
     ports:
